@@ -72,7 +72,9 @@ function ImprimirContent() {
             </p>
             <p className="font-bold text-gray-800 mt-0.5">
               Docente:{" "}
-              <span className="font-normal text-gray-900">Roberto Gómez</span>
+              <span className="font-normal text-gray-900">
+                Daniela Murillo Lopéz
+              </span>
             </p>
           </div>
         </div>

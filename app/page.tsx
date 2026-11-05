@@ -241,13 +241,69 @@ function PlaneacionContenido() {
   };
 
   return (
-    <div className="flex h-screen bg-[#f8f9fc] text-gray-800 font-sans selection:bg-[#090E30] selection:text-white w-full">
-      <nav className="w-64 bg-gradient-to-b from-[#090E30] to-[#121945] text-white flex flex-col shadow-2xl z-20 relative">
-        <div className="p-8 pb-4">
-          <div className="flex items-center gap-3 mb-2">
-            <div className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center backdrop-blur-md border border-white/10">
+    <div className="flex min-h-screen h-screen bg-slate-50 text-slate-800 font-sans selection:bg-blue-700 selection:text-white w-full">
+      <nav className="w-72 xl:w-[340px] 2xl:w-[360px] shrink-0 bg-gradient-to-b from-[#080D2B] via-[#101A46] to-[#111D50] text-white flex flex-col shadow-[12px_0_35px_-18px_rgba(8,13,43,0.55)] z-20 relative overflow-hidden">
+        <div className="absolute -top-24 -left-20 w-64 h-64 rounded-full bg-blue-500/10 blur-3xl pointer-events-none" />
+        <div className="absolute bottom-28 -right-24 w-64 h-64 rounded-full bg-indigo-400/10 blur-3xl pointer-events-none" />
+
+        <div className="relative px-7 pt-8 pb-7 border-b border-white/10">
+          <div className="w-full h-34 rounded-2xl bg-gradient-to-br from-[#102c65] to-[#071936] flex items-center justify-center px-5 py-3 shadow-xl ring-1 ring-white/10">
+            <img
+              src="/usag.png"
+              alt="Universidad San Andrés de Guanajuato"
+              className="w-full h-full object-contain"
+            />
+          </div>
+
+          <div className="mt-6 rounded-2xl border border-white/10 bg-white/[0.06] px-4 py-3.5 backdrop-blur-sm">
+            <p className="text-white text-sm font-semibold">
+              Universidad San Andrés
+            </p>
+            <p className="text-blue-200/60 text-xs mt-1">
+              Guanajuato · Plataforma docente
+            </p>
+          </div>
+        </div>
+
+        {/* Navegación */}
+        <div className="relative flex-1 px-5 py-7">
+          <div className="flex items-center justify-between px-3 mb-4">
+            <p className="text-[10px] font-extrabold text-blue-200/50 uppercase tracking-[0.22em]">
+              Menú principal
+            </p>
+            <span className="text-[9px] font-bold text-blue-200/40 border border-white/10 rounded-full px-2 py-1">
+              SACI
+            </span>
+          </div>
+
+          <div className="space-y-2">
+            <Link
+              href="/materias"
+              className="group flex items-center gap-4 px-4 py-4 rounded-2xl text-blue-100/70 hover:text-white hover:bg-white/[0.08] border border-transparent hover:border-white/10 transition-all duration-200"
+            >
+              <span className="w-11 h-11 shrink-0 rounded-xl bg-white/[0.06] group-hover:bg-blue-500/20 flex items-center justify-center transition-colors">
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="1.8"
+                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                  />
+                </svg>
+              </span>
+              <span className="min-w-0">
+                <span className="block font-bold text-sm">Mis materias</span>
+                <span className="block text-[11px] text-blue-200/45 mt-1">
+                  Consulta tus asignaturas
+                </span>
+              </span>
               <svg
-                className="w-6 h-6 text-white"
+                className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-70 group-hover:translate-x-1 transition-all"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -256,105 +312,139 @@ function PlaneacionContenido() {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
-                  d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
+                  d="m9 18 6-6-6-6"
                 />
               </svg>
+            </Link>
+
+            <Link
+              href="/"
+              className="group relative flex items-center gap-4 px-4 py-4 rounded-2xl text-white bg-gradient-to-r from-blue-600 to-blue-800 border border-blue-400/30 shadow-lg shadow-blue-950/40 transition-all duration-200"
+            >
+              <span className="absolute left-0 top-3 bottom-3 w-1 rounded-r-full bg-sky-200" />
+              <span className="w-11 h-11 shrink-0 rounded-xl bg-white/15 flex items-center justify-center ring-1 ring-white/15">
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="1.8"
+                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-5 8h4m-4 4h4"
+                  />
+                </svg>
+              </span>
+              <span className="min-w-0">
+                <span className="block font-extrabold text-sm">
+                  Planeación docente
+                </span>
+                <span className="block text-[11px] text-blue-100/75 mt-1">
+                  Diseña y organiza tus clases
+                </span>
+              </span>
+              <span className="ml-auto text-[9px] uppercase tracking-wider font-extrabold bg-white/15 rounded-full px-2.5 py-1">
+                Actual
+              </span>
+            </Link>
+
+            <Link
+              href="/historial"
+              className="group flex items-center gap-4 px-4 py-4 rounded-2xl text-blue-100/70 hover:text-white hover:bg-white/[0.08] border border-transparent hover:border-white/10 transition-all duration-200"
+            >
+              <span className="w-11 h-11 shrink-0 rounded-xl bg-white/[0.06] group-hover:bg-blue-500/20 flex items-center justify-center transition-colors">
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="1.8"
+                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                  />
+                </svg>
+              </span>
+              <span className="min-w-0">
+                <span className="block font-bold text-sm">
+                  Historial y reportes
+                </span>
+                <span className="block text-[11px] text-blue-200/45 mt-1">
+                  Consulta tus planeaciones
+                </span>
+              </span>
+              <svg
+                className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-70 group-hover:translate-x-1 transition-all"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="m9 18 6-6-6-6"
+                />
+              </svg>
+            </Link>
+          </div>
+
+          <div className="mt-9 mx-1 p-4 rounded-2xl border border-blue-300/15 bg-gradient-to-br from-blue-500/15 to-indigo-500/10">
+            <div className="flex items-center gap-2 mb-2">
+              <span className="w-7 h-7 rounded-lg bg-blue-400/20 flex items-center justify-center text-blue-200">
+                ✦
+              </span>
+              <p className="text-xs font-extrabold text-white">
+                Asistente SACI
+              </p>
             </div>
-            <h2 className="text-3xl font-black tracking-tight">SACI</h2>
+            <p className="text-[11px] leading-relaxed text-blue-100/65">
+              Recibe orientación para estructurar tus competencias, actividades
+              y evaluaciones.
+            </p>
           </div>
-          <p className="text-[#8c94c9] text-[10px] font-bold uppercase tracking-[0.2em] ml-1">
-            Universidad San Andrés
-          </p>
         </div>
 
-        <div className="flex-1 py-8 px-5 space-y-3">
-          <p className="px-2 text-xs font-bold text-[#5c689e] uppercase tracking-wider mb-2">
-            Workspace
+        {/* Perfil del usuario */}
+        <div className="relative p-5 border-t border-white/10 bg-black/20">
+          <div className="flex items-center gap-3 rounded-2xl p-3 bg-white/[0.06] border border-white/[0.08]">
+            <div className="w-12 h-12 shrink-0 rounded-2xl bg-gradient-to-br from-sky-400 via-blue-600 to-indigo-700 flex items-center justify-center font-black text-sm shadow-lg ring-2 ring-white/10">
+              RG
+            </div>
+            <div className="min-w-0 flex-1">
+              <p className="font-extrabold text-white text-sm truncate">
+                Daniela Murillo Lopéz
+              </p>
+              <p className="text-[11px] text-blue-200/60 mt-1">
+                Docente / Ing.
+              </p>
+            </div>
+            <span
+              className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(52,211,153,0.7)]"
+              title="Sesión activa"
+            />
+          </div>
+          <p className="text-center text-[9px] text-blue-200/30 uppercase tracking-[0.2em] mt-4">
+            Universidad San Andrés · SACI
           </p>
-
-          <Link
-            href="/materias"
-            className="flex items-center gap-3 text-[#8c94c9] hover:bg-white/5 hover:text-white p-3.5 rounded-xl font-medium transition-colors"
-          >
-            <svg
-              className="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-              />
-            </svg>
-            Mis Materias
-          </Link>
-
-          <Link
-            href="/"
-            className="flex items-center gap-3 bg-white/10 text-white p-3.5 rounded-xl font-medium shadow-sm border border-white/5 backdrop-blur-sm transition-all"
-          >
-            <svg
-              className="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
-              />
-            </svg>
-            Planeación Docente
-          </Link>
-
-          <Link
-            href="/historial"
-            className="flex items-center gap-3 text-[#8c94c9] hover:bg-white/5 hover:text-white p-3.5 rounded-xl font-medium transition-colors"
-          >
-            <svg
-              className="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
-              />
-            </svg>
-            Historial / Reportes PDF
-          </Link>
-        </div>
-
-        <div className="p-6 bg-black/20 backdrop-blur-md border-t border-white/10 flex items-center gap-4">
-          <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-blue-500 to-indigo-500 flex items-center justify-center font-bold text-sm shadow-lg border-2 border-[#090E30]">
-            RG
-          </div>
-          <div>
-            <p className="font-bold text-white text-sm">Roberto Gómez</p>
-            <p className="text-xs text-[#8c94c9]">Docente / Ing.</p>
-          </div>
         </div>
       </nav>
 
       {/* ================= ÁREA DE CONTENIDO ================= */}
       <div className="flex flex-1 overflow-hidden">
-        <div className="flex-1 p-12 overflow-y-auto custom-scrollbar relative">
-          <div className="max-w-5xl mx-auto">
+        <div className="flex-1 px-6 py-8 xl:px-10 2xl:px-12 overflow-y-auto custom-scrollbar relative">
+          <div className="max-w-6xl mx-auto">
             <div className="flex justify-between items-end mb-8">
               <div>
-                <p className="text-[#090E30] text-sm font-bold tracking-widest uppercase mb-2 flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#090E30] animate-pulse"></span>
+                <p className="text-blue-700 text-xs font-extrabold tracking-[0.18em] uppercase mb-2 flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
                   Módulo de Diseño Académico
                 </p>
-                <h1 className="text-4xl font-black tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-[#090E30] to-blue-800">
+                <h1 className="text-3xl xl:text-4xl font-extrabold tracking-tight text-slate-900">
                   Planeación Docente
                 </h1>
               </div>
@@ -362,7 +452,7 @@ function PlaneacionContenido() {
                 <button
                   onClick={revisarPlaneacionConIA}
                   disabled={revisandoIA}
-                  className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-7 py-3.5 rounded-xl font-bold tracking-wide transition-all shadow-[0_8px_20px_rgba(79,70,229,0.25)] hover:shadow-[0_8px_25px_rgba(79,70,229,0.4)] flex items-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+                  className="bg-[#1E40AF] hover:bg-[#1D4ED8] active:bg-[#1E3A8A] text-white px-7 py-3.5 rounded-xl font-bold tracking-wide transition-all duration-200 shadow-lg shadow-blue-900/20 hover:shadow-xl hover:shadow-blue-900/25 flex items-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
                 >
                   {revisandoIA ? (
                     <>
@@ -395,14 +485,14 @@ function PlaneacionContenido() {
 
                 <button
                   onClick={guardarPlaneacion}
-                  className="bg-[#090E30] hover:bg-[#151c4a] text-white px-8 py-3.5 rounded-xl font-bold tracking-wide transition-all shadow-[0_8px_20px_rgba(9,14,48,0.25)] flex items-center gap-2"
+                  className="bg-slate-900 hover:bg-slate-800 text-white px-8 py-3.5 rounded-xl font-bold tracking-wide transition-all duration-200 shadow-lg shadow-slate-900/15 flex items-center gap-2"
                 >
                   Guardar Planeación
                 </button>
               </div>
             </div>
 
-            <div className="bg-white p-6 rounded-3xl shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-gray-100 mb-8 flex items-center justify-between">
+            <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 mb-8 flex items-center justify-between gap-6">
               <div>
                 <label className="block text-xs font-bold uppercase tracking-wide text-gray-400 mb-1">
                   Materia Seleccionada para Planeación
@@ -415,7 +505,7 @@ function PlaneacionContenido() {
                 <select
                   value={selectedOferta}
                   onChange={handleMateriaChange}
-                  className="w-full bg-[#f8f9fc] border border-gray-200 p-3.5 rounded-xl font-medium text-gray-800 outline-none focus:border-[#090E30] transition-all"
+                  className="w-full bg-[#f8f9fc] border border-gray-200 p-3.5 rounded-xl font-medium text-gray-800 outline-none focus:border-blue-600 transition-all"
                 >
                   {materiasAsignadas.length === 0 ? (
                     <option value="">Cargando materias...</option>
@@ -434,8 +524,8 @@ function PlaneacionContenido() {
             </div>
 
             {observacionesIA.length > 0 && (
-              <div className="bg-indigo-50/50 border border-indigo-100 p-7 rounded-3xl mb-8 space-y-5 shadow-sm">
-                <h3 className="text-lg font-black text-indigo-950 flex items-center gap-2">
+              <div className="bg-blue-50/70 border border-blue-100 p-6 xl:p-7 rounded-2xl mb-8 space-y-5 shadow-sm">
+                <h3 className="text-lg font-black text-blue-950 flex items-center gap-2">
                   <span className="text-xl">💡</span> Observaciones del Comité
                   Pedagógico (IA)
                 </h3>
@@ -446,7 +536,7 @@ function PlaneacionContenido() {
                       className="bg-white p-6 rounded-2xl border border-indigo-50 shadow-sm space-y-3 transition-all hover:shadow-md"
                     >
                       <div className="flex justify-between items-center border-b border-gray-50 pb-3">
-                        <span className="font-bold text-sm text-indigo-950 flex items-center gap-2">
+                        <span className="font-bold text-sm text-blue-950 flex items-center gap-2">
                           <span className="w-2 h-2 rounded-full bg-indigo-500"></span>
                           {obs.campo}
                         </span>
@@ -468,8 +558,8 @@ function PlaneacionContenido() {
                         </strong>{" "}
                         {obs.observacion}
                       </p>
-                      <div className="bg-gradient-to-r from-blue-50/50 to-indigo-50/50 p-4 rounded-xl border border-indigo-100/50 mt-2">
-                        <p className="text-sm text-indigo-900 leading-relaxed">
+                      <div className="bg-blue-50 p-4 rounded-xl border border-blue-100 mt-2">
+                        <p className="text-sm text-blue-900 leading-relaxed">
                           <strong className="font-bold">Sugerencia:</strong>{" "}
                           {obs.sugerencia}
                         </p>
@@ -480,7 +570,7 @@ function PlaneacionContenido() {
               </div>
             )}
 
-            <div className="bg-white p-8 rounded-3xl shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-gray-100 mb-8 space-y-6">
+            <div className="bg-white p-7 xl:p-8 rounded-2xl shadow-sm border border-slate-200/80 mb-8 space-y-6">
               <h3 className="text-xl font-bold text-gray-800 border-b border-gray-100 pb-4">
                 Datos Generales
               </h3>
@@ -493,7 +583,7 @@ function PlaneacionContenido() {
                     name="competenciaGeneral"
                     value={cabecera.competenciaGeneral}
                     onChange={handleCabeceraChange}
-                    className="w-full bg-[#f8f9fc] border border-transparent p-4 rounded-xl h-24 resize-none focus:bg-white focus:ring-2 focus:ring-[#090E30]/20 focus:border-[#090E30] outline-none text-gray-800 font-medium transition-all"
+                    className="w-full bg-[#f8f9fc] border border-slate-200 p-4 rounded-xl h-24 resize-none focus:bg-white focus:ring-4 focus:ring-blue-100 focus:border-blue-600 outline-none text-gray-800 font-medium transition-all"
                     placeholder="Describe la competencia principal de la materia..."
                   />
                 </div>
@@ -505,7 +595,7 @@ function PlaneacionContenido() {
                     name="competenciasEspecificas"
                     value={cabecera.competenciasEspecificas}
                     onChange={handleCabeceraChange}
-                    className="w-full bg-[#f8f9fc] border border-transparent p-4 rounded-xl h-24 resize-none focus:bg-white focus:ring-2 focus:ring-[#090E30]/20 focus:border-[#090E30] outline-none text-gray-800 font-medium transition-all"
+                    className="w-full bg-[#f8f9fc] border border-slate-200 p-4 rounded-xl h-24 resize-none focus:bg-white focus:ring-4 focus:ring-blue-100 focus:border-blue-600 outline-none text-gray-800 font-medium transition-all"
                     placeholder="Lista las competencias secundarias..."
                   />
                 </div>
@@ -518,7 +608,7 @@ function PlaneacionContenido() {
               </h3>
               <button
                 onClick={agregarSecuencia}
-                className="bg-blue-50 text-blue-700 px-5 py-2.5 rounded-xl font-bold hover:bg-blue-100 transition-colors flex items-center gap-2 border border-blue-100"
+                className="bg-blue-50 text-blue-800 px-5 py-2.5 rounded-xl font-bold hover:bg-blue-100 transition-colors flex items-center gap-2 border border-blue-200"
               >
                 + Agregar Secuencia
               </button>
@@ -528,7 +618,7 @@ function PlaneacionContenido() {
               {secuencias.map((seq) => (
                 <div
                   key={seq.id}
-                  className="bg-white p-7 rounded-3xl shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-gray-100 relative group"
+                  className="bg-white p-6 xl:p-7 rounded-2xl shadow-sm border border-slate-200/80 relative group transition-shadow hover:shadow-md"
                 >
                   {secuencias.length > 1 && (
                     <button
@@ -539,7 +629,7 @@ function PlaneacionContenido() {
                     </button>
                   )}
                   <div className="flex items-center gap-4 mb-6 border-b border-gray-100 pb-5">
-                    <span className="bg-[#090E30] text-white w-9 h-9 rounded-xl flex items-center justify-center font-bold shadow-sm">
+                    <span className="bg-blue-800 text-white w-9 h-9 rounded-xl flex items-center justify-center font-bold shadow-sm">
                       {seq.numeroSecuencia}
                     </span>
                     <h4 className="font-bold text-gray-800 text-lg">
@@ -561,7 +651,7 @@ function PlaneacionContenido() {
                             e.target.value,
                           )
                         }
-                        className="w-full bg-[#f8f9fc] border border-transparent p-4 rounded-xl focus:bg-white focus:ring-2 focus:ring-[#090E30]/20 focus:border-[#090E30] outline-none text-sm h-24 resize-none transition-all font-medium text-gray-800"
+                        className="w-full bg-[#f8f9fc] border border-slate-200 p-4 rounded-xl focus:bg-white focus:ring-4 focus:ring-blue-100 focus:border-blue-600 outline-none text-sm h-24 resize-none transition-all font-medium text-gray-800"
                       />
                     </div>
                     <div className="col-span-6 md:col-span-2">
@@ -578,7 +668,7 @@ function PlaneacionContenido() {
                             parseInt(e.target.value) || 0,
                           )
                         }
-                        className="w-full bg-[#f8f9fc] border border-transparent p-4 rounded-xl focus:bg-white focus:ring-2 focus:ring-[#090E30]/20 focus:border-[#090E30] outline-none text-sm transition-all font-medium text-gray-800 text-center"
+                        className="w-full bg-[#f8f9fc] border border-slate-200 p-4 rounded-xl focus:bg-white focus:ring-4 focus:ring-blue-100 focus:border-blue-600 outline-none text-sm transition-all font-medium text-gray-800 text-center"
                       />
                     </div>
                     <div className="col-span-6 md:col-span-2">
@@ -595,7 +685,7 @@ function PlaneacionContenido() {
                             parseInt(e.target.value) || 0,
                           )
                         }
-                        className="w-full bg-[#f8f9fc] border border-transparent p-4 rounded-xl focus:bg-white focus:ring-2 focus:ring-[#090E30]/20 focus:border-[#090E30] outline-none text-sm transition-all font-medium text-gray-800 text-center"
+                        className="w-full bg-[#f8f9fc] border border-slate-200 p-4 rounded-xl focus:bg-white focus:ring-4 focus:ring-blue-100 focus:border-blue-600 outline-none text-sm transition-all font-medium text-gray-800 text-center"
                       />
                     </div>
                     <div className="col-span-12 md:col-span-6">
@@ -611,7 +701,7 @@ function PlaneacionContenido() {
                             e.target.value,
                           )
                         }
-                        className="w-full bg-[#f8f9fc] border border-transparent p-4 rounded-xl focus:bg-white focus:ring-2 focus:ring-[#090E30]/20 focus:border-[#090E30] outline-none text-sm h-28 resize-none transition-all font-medium text-gray-800"
+                        className="w-full bg-[#f8f9fc] border border-slate-200 p-4 rounded-xl focus:bg-white focus:ring-4 focus:ring-blue-100 focus:border-blue-600 outline-none text-sm h-28 resize-none transition-all font-medium text-gray-800"
                       />
                     </div>
                     <div className="col-span-12 md:col-span-6">
@@ -627,7 +717,7 @@ function PlaneacionContenido() {
                             e.target.value,
                           )
                         }
-                        className="w-full bg-[#f8f9fc] border border-transparent p-4 rounded-xl focus:bg-white focus:ring-2 focus:ring-[#090E30]/20 focus:border-[#090E30] outline-none text-sm h-28 resize-none transition-all font-medium text-gray-800"
+                        className="w-full bg-[#f8f9fc] border border-slate-200 p-4 rounded-xl focus:bg-white focus:ring-4 focus:ring-blue-100 focus:border-blue-600 outline-none text-sm h-28 resize-none transition-all font-medium text-gray-800"
                       />
                     </div>
                   </div>
@@ -637,10 +727,10 @@ function PlaneacionContenido() {
           </div>
         </div>
 
-        <div className="w-[450px] 2xl:w-[550px] flex flex-col bg-white border-l border-gray-100 shadow-[-15px_0_40px_-15px_rgba(0,0,0,0.03)] z-10 relative">
-          <div className="p-6 border-b border-gray-100 flex items-center justify-between bg-white/80 backdrop-blur-md">
+        <div className="w-[390px] xl:w-[420px] 2xl:w-[460px] flex flex-col bg-white border-l border-slate-200 shadow-[-12px_0_35px_-20px_rgba(15,23,42,0.18)] z-10 relative">
+          <div className="p-5 border-b border-slate-200 flex items-center justify-between bg-white">
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-600 text-white flex items-center justify-center font-black shadow-lg shadow-indigo-500/20">
+              <div className="w-12 h-12 rounded-2xl bg-[#1E40AF] text-white flex items-center justify-center font-black shadow-lg shadow-blue-900/20">
                 <svg
                   className="w-6 h-6"
                   fill="none"
@@ -659,14 +749,14 @@ function PlaneacionContenido() {
                 <h2 className="font-extrabold text-gray-900 text-lg">
                   Copiloto IA
                 </h2>
-                <p className="text-[10px] text-indigo-600 font-bold uppercase tracking-widest mt-0.5">
+                <p className="text-[10px] text-blue-700 font-bold uppercase tracking-widest mt-0.5">
                   Gemini Powered
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="flex-1 overflow-y-auto p-6 space-y-6 bg-[#f8f9fc] custom-scrollbar">
+          <div className="flex-1 overflow-y-auto p-5 space-y-5 bg-slate-50 custom-scrollbar">
             {chat.map((msg, idx) => (
               <div
                 key={idx}
@@ -704,18 +794,18 @@ function PlaneacionContenido() {
 
           <form
             onSubmit={enviarMensaje}
-            className="p-6 bg-white border-t border-gray-100"
+            className="p-5 bg-white border-t border-slate-200"
           >
             <div className="relative flex items-center group">
               <input
                 value={inputChat}
                 onChange={(e) => setInputChat(e.target.value)}
                 placeholder="Pide un ejemplo o sugerencia..."
-                className="w-full bg-[#f8f9fc] border border-transparent py-4 pl-6 pr-16 rounded-2xl text-sm focus:bg-white focus:border-indigo-100 focus:ring-4 focus:ring-indigo-50 transition-all outline-none font-medium text-gray-800 shadow-inner"
+                className="w-full bg-slate-50 border border-slate-200 py-4 pl-5 pr-16 rounded-2xl text-sm focus:bg-white focus:border-blue-600 focus:ring-4 focus:ring-blue-100 transition-all outline-none font-medium text-slate-800"
               />
               <button
                 type="submit"
-                className="absolute right-3 top-1/2 -translate-y-1/2 bg-[#090E30] hover:bg-indigo-600 text-white p-2.5 rounded-xl w-10 h-10 shadow-md transition-colors disabled:opacity-50 flex items-center justify-center"
+                className="absolute right-3 top-1/2 -translate-y-1/2 bg-[#1E40AF] hover:bg-[#1D4ED8] active:bg-[#1E3A8A] text-white p-2.5 rounded-xl w-10 h-10 shadow-md shadow-blue-900/20 transition-colors disabled:opacity-50 flex items-center justify-center"
                 disabled={isTyping || !inputChat.trim()}
               >
                 <svg
@@ -738,7 +828,7 @@ export default function PlaneacionDocentePage() {
   return (
     <Suspense
       fallback={
-        <div className="flex h-screen items-center justify-center font-bold text-gray-500">
+        <div className="flex h-screen items-center justify-center bg-slate-50 font-semibold text-slate-500">
           Cargando planeación...
         </div>
       }
